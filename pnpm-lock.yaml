@@ -34,13 +34,13 @@ importers:
         version: 1.2.2(react@18.3.1)
       react-scripts:
         specifier: 5.0.1
-        version: 5.0.1(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(sass@1.94.1)(type-fest@0.21.3)(typescript@4.9.5)
+        version: 5.0.1(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(sass@1.94.2)(type-fest@0.21.3)(typescript@4.9.5)
       react-typewriter-effect:
         specifier: ^1.1.0
         version: 1.1.0(react@18.3.1)
       sass:
-        specifier: ^1.94.1
-        version: 1.94.1
+        specifier: ^1.94.2
+        version: 1.94.2
       styled-jsx:
         specifier: ^5.1.7
         version: 5.1.7(@babel/core@7.28.5)(react@18.3.1)
@@ -48,8 +48,8 @@ importers:
         specifier: ^9.4.1
         version: 9.4.1
       swr:
-        specifier: ^2.3.6
-        version: 2.3.6(react@18.3.1)
+        specifier: ^2.3.7
+        version: 2.3.7(react@18.3.1)
 
 packages:
 
@@ -5452,8 +5452,8 @@ packages:
       sass-embedded:
         optional: true
 
-  sass@1.94.1:
-    resolution: {integrity: sha512-/YVm5FRQaRlr3oNh2LLFYne1PdPlRZGyKnHh1sLleOqLcohTR4eUUvBjBIqkl1fEXd1MGOHgzJGJh+LgTtV4KQ==}
+  sass@1.94.2:
+    resolution: {integrity: sha512-N+7WK20/wOr7CzA2snJcUSSNTCzeCGUTFY3OgeQP3mZ1aj9NMQ0mSTXwlrnd89j33zzQJGqIN52GIOmYrfq46A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -5877,8 +5877,8 @@ packages:
     resolution: {integrity: sha512-1nT2T8EzUpZ0FagEqaN/YAhRj33F2x/lN6cyB0/xoYJDMf8KwTFT3hMOeoB8Tg4o3+P/CKqskP+WX0Df046fqA==}
     engines: {node: '>= 4.7.0'}
 
-  swr@2.3.6:
-    resolution: {integrity: sha512-wfHRmHWk/isGNMwlLGlZX5Gzz/uTgo0o2IRuTMcf4CPuPFJZlq0rDaKUx+ozB5nBOReNV1kiOyzMfj+MBMikLw==}
+  swr@2.3.7:
+    resolution: {integrity: sha512-ZEquQ82QvalqTxhBVv/DlAg2mbmUjF4UgpPg9wwk4ufb9rQnZXh1iKyyKBqV6bQGu1Ie7L1QwSYO07qFIa1p+g==}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -12819,7 +12819,7 @@ snapshots:
       prop-types: 15.8.1
       react: 18.3.1
 
-  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(sass@1.94.1)(type-fest@0.21.3)(typescript@4.9.5):
+  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(sass@1.94.2)(type-fest@0.21.3)(typescript@4.9.5):
     dependencies:
       '@babel/core': 7.28.5
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.17(react-refresh@0.11.0)(type-fest@0.21.3)(webpack-dev-server@4.15.2(webpack@5.102.1))(webpack@5.102.1)
@@ -12859,7 +12859,7 @@ snapshots:
       react-refresh: 0.11.0
       resolve: 1.22.11
       resolve-url-loader: 4.0.0
-      sass-loader: 12.6.0(sass@1.94.1)(webpack@5.102.1)
+      sass-loader: 12.6.0(sass@1.94.2)(webpack@5.102.1)
       semver: 7.7.3
       source-map-loader: 3.0.2(webpack@5.102.1)
       style-loader: 3.3.4(webpack@5.102.1)
@@ -13136,15 +13136,15 @@ snapshots:
 
   sanitize.css@13.0.0: {}
 
-  sass-loader@12.6.0(sass@1.94.1)(webpack@5.102.1):
+  sass-loader@12.6.0(sass@1.94.2)(webpack@5.102.1):
     dependencies:
       klona: 2.0.6
       neo-async: 2.6.2
       webpack: 5.102.1
     optionalDependencies:
-      sass: 1.94.1
+      sass: 1.94.2
 
-  sass@1.94.1:
+  sass@1.94.2:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.4
@@ -13676,7 +13676,7 @@ snapshots:
     dependencies:
       ssr-window: 4.0.2
 
-  swr@2.3.6(react@18.3.1):
+  swr@2.3.7(react@18.3.1):
     dependencies:
       dequal: 2.0.3
       react: 18.3.1

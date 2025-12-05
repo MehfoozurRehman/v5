@@ -13,10 +13,10 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "5.0.1",
     "react-typewriter-effect": "^1.1.0",
-    "sass": "^1.94.1",
+    "sass": "^1.94.2",
     "styled-jsx": "^5.1.7",
     "swiper": "^9.4.1",
-    "swr": "^2.3.6"
+    "swr": "^2.3.7"
   },
   "scripts": {
     "start": "react-scripts start",
