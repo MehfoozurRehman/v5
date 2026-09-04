@@ -1,34 +1,49 @@
 {
-  "name": "mehfooz-portfolio",
+  "name": "portolio",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "node scripts/generate-cv-pdf.mjs && next build",
-    "generate:cv": "node scripts/generate-cv-pdf.mjs",
-    "start": "next start",
-    "lint": "eslint",
-    "deploy": "pnpm build && firebase deploy --only hosting"
-  },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "lucide-react": "^1.37.0",
-    "next": "16.2.10",
-    "pdfkit": "^0.20.1",
-    "react": "19.2.7",
-    "react-dom": "19.2.7",
-    "react-github-calendar": "^5.0.8"
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^14.1.1",
+    "axios": "^0.27.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-feather": "^2.0.9",
+    "react-github-calendar": "^3.3.1",
+    "react-outside-click-handler": "^1.3.0",
+    "react-pageflip": "^2.0.3",
+    "react-reveal": "^1.2.2",
+    "react-scripts": "5.0.1",
+    "react-typewriter-effect": "^1.1.0",
+    "sass": "^1.51.0",
+    "styled-jsx": "^5.0.2",
+    "swiper": "^8.1.4",
+    "swr": "^1.3.0",
+    "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.2",
-    "@types/node": "^26.2.0",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.4",
-    "eslint-config-next": "16.2.10",
-    "sharp": "^0.35.4",
-    "tailwindcss": "^4.3.2",
-    "typescript": "^6.0.3"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "packageManager": "pnpm@11.9.0"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

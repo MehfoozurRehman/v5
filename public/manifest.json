@@ -1,32 +1,25 @@
 {
-  "name": "Mehfooz-ur-Rehman Portfolio",
-  "short_name": "MUR Portfolio",
-  "description": "This is Mehfooz-ur-Rehman's portfolio.",
+  "short_name": "Mehfooz-ur-Rehman",
+  "name": "Mehfooz-ur-Rehman",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "https://avatars.githubusercontent.com/u/68416499?s=400&u=e4115c8a9a984f4b5075cd9c1de86ecf1fe23da5&v=4",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/svg+xml"
+      "type": "image/png"
     },
     {
-      "src": "favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "192x192",
-      "purpose": "any"
+      "src": "https://avatars.githubusercontent.com/u/68416499?s=400&u=e4115c8a9a984f4b5075cd9c1de86ecf1fe23da5&v=4",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
-      "src": "favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "512x512",
-      "purpose": "maskable"
+      "src": "https://avatars.githubusercontent.com/u/68416499?s=400&u=e4115c8a9a984f4b5075cd9c1de86ecf1fe23da5&v=4",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#F1EFE5",
-  "theme_color": "#0C2120",
-  "orientation": "natural",
-  "lang": "en",
-  "dir": "auto",
-  "scope": "."
+  "theme_color": "#df3c3c",
+  "background_color": "#0e1630"
 }
