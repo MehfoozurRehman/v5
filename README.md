@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Developer Portfolio (v5)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A single-page personal portfolio: a home hero, an about section, services, an education and experience flip-book, a GitHub-backed project list, a blog list and a contact form.
 
-## Available Scripts
+**Status:** In progress. The page builds, and a GitHub Actions workflow deploys it to Firebase Hosting on each push to `main`. But the contact form only logs to the console, the chat widget is commented out of the app, the blog entries are placeholder text, and the Clients section is also commented out.
 
-In the project directory, you can run:
+## The problem
 
-### `npm start`
+A developer needs a portfolio that presents who they are, what they have built and how to reach them. This version uses Create React App and pulls project data from GitHub, so the list stays current without manual edits.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What it does
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- About section with the GitHub profile of the owner, fetched from `api.github.com` (`src/components/About.js`).
+- Project section that lists the owner's public repositories from the GitHub API, with a filter and cards (`Portfolio.js`, `PortfolioFilter.js`, `ProjectCard.js`).
+- Education and experience displayed as a flip-book with `react-pageflip` (`src/components/Book.js`).
+- Services section (`Services.js`, `ServicesCard.js`) and a blog list (`Blog.js`, `BlogCard.js`).
+- Contact form with name, email and subject fields and a submit handler (`Contact.js`).
 
-### `npm test`
+## How it's built
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 18 with Create React App (`react-scripts` 5). Components are function components in `src/components/`, with one stylesheet in `src/index.scss`.
+- `react-github-calendar`, `react-reveal` and `react-typewriter-effect` provide the GitHub activity grid and the animations.
+- Shared helpers, such as the scroll-to-bottom function used by the chat widget, live in `src/utils/function.js`.
+- Deployment is a GitHub Actions workflow (`.github/workflows/deploy.yml`). It runs `npm ci` and `npm run build`, then deploys hosting to Firebase with a `FIREBASE_TOKEN` repository secret.
 
-### `npm run build`
+## Running it locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+npm start      # http://localhost:3000
+npm run build  # production bundle in build/
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Other scripts: `npm test` (react-scripts test runner) and `npm run eject`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What's left
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The contact form's `handleSubmit` only calls `preventDefault` and logs the fields. Nothing is sent.
+- The chatbot component exists in `src/components/Chatbot.js` but its render is commented out in `App.js`, and it does not respond to input.
+- The Clients section is commented out in `App.js`.
+- Blog entries are a hard-coded array of placeholder text ("Blog name Lorem ipsum...").
+- Testing libraries are installed but there are no test files.
+- Both `package-lock.json` and `pnpm-lock.yaml` are committed, so the package manager is not settled.
